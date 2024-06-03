@@ -15,29 +15,39 @@
  * limitations under the License.
  */
 
-package com.swufe.constant;
+package com.swufe.core;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * 用户常量
- *
- *
+ * 用户信息实体
  */
-public final class UserConstant {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class UserInfoDTO {
 
     /**
-     * 用户 ID Key
+     * 用户 ID
      */
-    public static final String USER_ID_KEY = "userId";
+    private String userId;
 
     /**
-     * 用户名 Key
+     * 用户名
      */
-    public static final String USER_NAME_KEY = "username";
+    private String username;
 
     /**
-     * 用户真实名称 Key
+     * 真实姓名
      */
-    public static final String REAL_NAME_KEY = "realName";
+    private String realName;
 
-    public static final String USER_TOKEN_KEY = "token";
+    /**
+     * 用户 Token
+     */
+    private String token;
 }

@@ -15,27 +15,34 @@
  * limitations under the License.
  */
 
-package com.swufe.constant;
+package com.swufe.exception;
+
+
+import com.swufe.errorcode.BaseErrorCode;
+import com.swufe.errorcode.IErrorCode;
 
 /**
- * 用户常量
- *
- *
+ * 远程服务调用异常
  */
-public final class UserConstant {
+public class RemoteException extends AbstractException {
 
-    /**
-     * 用户 ID Key
-     */
-    public static final String USER_ID_KEY = "userId";
+    public RemoteException(String message) {
+        this(message, null, BaseErrorCode.REMOTE_ERROR);
+    }
 
-    /**
-     * 用户名 Key
-     */
-    public static final String USER_NAME_KEY = "username";
+    public RemoteException(String message, IErrorCode errorCode) {
+        this(message, null, errorCode);
+    }
 
-    /**
-     * 用户真实名称 Key
-     */
-    public static final String REAL_NAME_KEY = "realName";
+    public RemoteException(String message, Throwable throwable, IErrorCode errorCode) {
+        super(message, throwable, errorCode);
+    }
+
+    @Override
+    public String toString() {
+        return "RemoteException{" +
+                "code='" + errorCode + "'," +
+                "message='" + errorMessage + "'" +
+                '}';
+    }
 }

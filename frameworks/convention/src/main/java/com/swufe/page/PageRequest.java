@@ -15,27 +15,26 @@
  * limitations under the License.
  */
 
-package com.swufe.constant;
+package com.swufe.page;
+
+import lombok.Data;
 
 /**
- * 用户常量
+ * 分页请求对象
  *
- *
+ * <p> {@link PageRequest}、{@link PageResponse}
+ * 可以理解是防腐层的一种实现，不论底层 ORM 框架，对外分页参数属性不变
  */
-public final class UserConstant {
+@Data
+public class PageRequest {
 
     /**
-     * 用户 ID Key
+     * 当前页
      */
-    public static final String USER_ID_KEY = "userId";
+    private Long current = 1L;
 
     /**
-     * 用户名 Key
+     * 每页显示条数
      */
-    public static final String USER_NAME_KEY = "username";
-
-    /**
-     * 用户真实名称 Key
-     */
-    public static final String REAL_NAME_KEY = "realName";
+    private Long size = 10L;
 }

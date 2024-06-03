@@ -15,19 +15,38 @@
  * limitations under the License.
  */
 
-package com.swufe.safa;
+package com.swufe.exception;
 
-import org.springframework.beans.factory.InitializingBean;
+
+import com.swufe.errorcode.BaseErrorCode;
+import com.swufe.errorcode.IErrorCode;
 
 /**
- * FastJson安全模式，开启后关闭类型隐式传递
- *
- *
+ * 客户端异常
  */
-public class FastJsonSafeMode implements InitializingBean {
+public class ClientException extends AbstractException {
+
+    public ClientException(IErrorCode errorCode) {
+        this(null, null, errorCode);
+    }
+
+    public ClientException(String message) {
+        this(message, null, BaseErrorCode.CLIENT_ERROR);
+    }
+
+    public ClientException(String message, IErrorCode errorCode) {
+        this(message, null, errorCode);
+    }
+
+    public ClientException(String message, Throwable throwable, IErrorCode errorCode) {
+        super(message, throwable, errorCode);
+    }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
-        System.setProperty("fastjson2.parser.safeMode", "true");
+    public String toString() {
+        return "ClientException{" +
+                "code='" + errorCode + "'," +
+                "message='" + errorMessage + "'" +
+                '}';
     }
 }

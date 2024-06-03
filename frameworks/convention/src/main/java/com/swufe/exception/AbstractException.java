@@ -15,27 +15,31 @@
  * limitations under the License.
  */
 
-package com.swufe.constant;
+package com.swufe.exception;
+
+import com.swufe.errorcode.IErrorCode;
+import lombok.Getter;
+
+import org.springframework.util.StringUtils;
+
+import java.util.Optional;
 
 /**
- * 用户常量
- *
- *
+ * 抽象项目中三类异常体系，客户端异常、服务端异常以及远程服务调用异常
+ * @see ClientException
+ * @see ServiceException
+ * @see RemoteException
  */
-public final class UserConstant {
+@Getter
+public abstract class AbstractException extends RuntimeException {
 
-    /**
-     * 用户 ID Key
-     */
-    public static final String USER_ID_KEY = "userId";
+    public final String errorCode;
 
-    /**
-     * 用户名 Key
-     */
-    public static final String USER_NAME_KEY = "username";
+    public final String errorMessage;
 
-    /**
-     * 用户真实名称 Key
-     */
-    public static final String REAL_NAME_KEY = "realName";
+    public AbstractException(String message, Throwable throwable, IErrorCode errorCode) {
+        super(message, throwable);
+        this.errorCode = errorCode.code();
+        this.errorMessage = Optional.ofNullable(StringUtils.hasLength(message) ? message : null).orElse(errorCode.message());
+    }
 }

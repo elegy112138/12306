@@ -15,22 +15,44 @@
  * limitations under the License.
  */
 
-package com.swufe.toolkit;
+package com.swufe.core.snowflake;
 
-import lombok.SneakyThrows;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * 线程池工具类
+ * 雪花算法组成部分，通常用来反解析使用
  */
-public final class ThreadUtil {
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SnowflakeIdInfo {
 
     /**
-     * 睡眠当前线程指定时间 {@param millis}
-     *
-     * @param millis 睡眠时间，单位毫秒
+     * 时间戳
      */
-    @SneakyThrows(value = InterruptedException.class)
-    public static void sleep(long millis) {
-        Thread.sleep(millis);
-    }
+    private Long timestamp;
+
+    /**
+     * 工作机器节点 ID
+     */
+    private Integer workerId;
+
+    /**
+     * 数据中心 ID
+     */
+    private Integer dataCenterId;
+
+    /**
+     * 自增序号，当高频模式下时，同一毫秒内生成 N 个 ID，则这个序号在同一毫秒下，自增以避免 ID 重复
+     */
+    private Integer sequence;
+
+    /**
+     * 通过基因法生成的序号，会和 {@link SnowflakeIdInfo#sequence} 共占 12 bit
+     */
+    private Integer gene;
 }

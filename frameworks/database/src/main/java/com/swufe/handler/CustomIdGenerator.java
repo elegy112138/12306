@@ -15,22 +15,18 @@
  * limitations under the License.
  */
 
-package com.swufe.toolkit;
+package com.swufe.handler;
 
-import lombok.SneakyThrows;
+import com.baomidou.mybatisplus.core.incrementer.IdentifierGenerator;
+import com.swufe.toolkit.SnowflakeIdUtil;
 
 /**
- * 线程池工具类
+ * 自定义雪花算法生成器
  */
-public final class ThreadUtil {
+public class CustomIdGenerator implements IdentifierGenerator {
 
-    /**
-     * 睡眠当前线程指定时间 {@param millis}
-     *
-     * @param millis 睡眠时间，单位毫秒
-     */
-    @SneakyThrows(value = InterruptedException.class)
-    public static void sleep(long millis) {
-        Thread.sleep(millis);
+    @Override
+    public Number nextId(Object entity) {
+        return SnowflakeIdUtil.nextId();
     }
 }

@@ -15,22 +15,30 @@
  * limitations under the License.
  */
 
-package com.swufe.toolkit;
+package com.swufe.core.snowflake;
 
-import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.InitializingBean;
 
 /**
- * 线程池工具类
+ * 使用随机数获取雪花 WorkId
  */
-public final class ThreadUtil {
+@Slf4j
+public class RandomWorkIdChoose extends AbstractWorkIdChooseTemplate implements InitializingBean {
 
-    /**
-     * 睡眠当前线程指定时间 {@param millis}
-     *
-     * @param millis 睡眠时间，单位毫秒
-     */
-    @SneakyThrows(value = InterruptedException.class)
-    public static void sleep(long millis) {
-        Thread.sleep(millis);
+    @Override
+    protected WorkIdWrapper chooseWorkId() {
+        int start = 0, end = 31;
+        return new WorkIdWrapper(getRandom(start, end), getRandom(start, end));
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        chooseAndInit();
+    }
+
+    private static long getRandom(int start, int end) {
+        long random = (long) (Math.random() * (end - start + 1) + start);
+        return random;
     }
 }

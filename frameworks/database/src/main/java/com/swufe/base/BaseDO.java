@@ -15,22 +15,35 @@
  * limitations under the License.
  */
 
-package com.swufe.toolkit;
+package com.swufe.base;
 
-import lombok.SneakyThrows;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
+import java.util.Date;
 
 /**
- * 线程池工具类
+ * 数据持久层基础属性
  */
-public final class ThreadUtil {
+@Data
+public class BaseDO {
 
     /**
-     * 睡眠当前线程指定时间 {@param millis}
-     *
-     * @param millis 睡眠时间，单位毫秒
+     * 创建时间
      */
-    @SneakyThrows(value = InterruptedException.class)
-    public static void sleep(long millis) {
-        Thread.sleep(millis);
-    }
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
+
+    /**
+     * 修改时间
+     */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
+
+    /**
+     * 删除标志
+     */
+    @TableField(fill = FieldFill.INSERT)
+    private Integer delFlag;
 }

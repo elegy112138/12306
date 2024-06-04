@@ -15,22 +15,27 @@
  * limitations under the License.
  */
 
-package com.swufe.toolkit;
+package com.swufe.core.snowflake;
 
-import lombok.SneakyThrows;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * 线程池工具类
+ * WorkId 包装器
  */
-public final class ThreadUtil {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class WorkIdWrapper {
 
     /**
-     * 睡眠当前线程指定时间 {@param millis}
-     *
-     * @param millis 睡眠时间，单位毫秒
+     * 工作ID
      */
-    @SneakyThrows(value = InterruptedException.class)
-    public static void sleep(long millis) {
-        Thread.sleep(millis);
-    }
+    private Long workId;
+
+    /**
+     * 数据中心ID
+     */
+    private Long dataCenterId;
 }

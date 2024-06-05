@@ -4,33 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e96272bf-c2a6-4297-b412-2e471df104cb" name="更改" comment="完成持久组件以及雪花算法组件">
-      <change afterPath="$PROJECT_DIR$/frameworks/log/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/annotation/ILog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/config/LogAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frameworks/log/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+    <list default="true" id="e96272bf-c2a6-4297-b412-2e471df104cb" name="更改" comment="完成log组件">
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/Cache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/DistributedCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/MultistageCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/RedisKeySerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/StringRedisTemplateProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/config/BloomFilterPenetrateProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/config/CacheAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/config/RedisDistributedProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/core/CacheGetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/core/CacheGetIfAbsent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/core/CacheLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/toolkit/CacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/toolkit/FastJson2Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/cache/src/main/resources/lua/putIfAllAbsent.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/annotation/Idempotent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/annotation/MQIdempotent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/annotation/RestAPIIdempotent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/config/IdempotentAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/config/IdempotentProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/AbstractIdempotentExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentExecuteHandlerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentParamWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/RepeatConsumptionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/param/IdempotentParamExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/param/IdempotentParamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/spel/IdempotentSpELByMQExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/spel/IdempotentSpELByRestAPIExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/spel/IdempotentSpELService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/token/IdempotentTokenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/token/IdempotentTokenExecuteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/token/IdempotentTokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentMQConsumeStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentSceneEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/LogUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/SpELUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/java/com/swufe/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/java/com/swufe/Results.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/java/com/swufe/config/WebAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/java/com/swufe/initialize/InitializeDispatcherServletController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/java/com/swufe/initialize/InitializeDispatcherServletHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frameworks/web/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/base/BaseDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/base/BaseDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/config/MybatisPlusAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/config/MybatisPlusAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/handler/CustomIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/handler/CustomIdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/handler/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/handler/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/sharding/CustomDbHashModShardingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/sharding/CustomDbHashModShardingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/toolkit/PageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/database/src/main/java/com/swufe/toolkit/PageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/config/DistributedIdAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/config/DistributedIdAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/IdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/serviceid/DefaultServiceIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/serviceid/DefaultServiceIdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/serviceid/ServiceIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/serviceid/ServiceIdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/AbstractWorkIdChooseTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/AbstractWorkIdChooseTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/LocalRedisWorkIdChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/LocalRedisWorkIdChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/RandomWorkIdChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/RandomWorkIdChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/Snowflake.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/Snowflake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/SnowflakeIdInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/SnowflakeIdInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/WorkIdWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/core/snowflake/WorkIdWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/handler/IdGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/handler/IdGeneratorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/toolkit/SnowflakeIdUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/distributedid/src/main/java/com/swufe/toolkit/SnowflakeIdUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/annotation/ILog.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/annotation/ILog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/config/LogAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/config/LogAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/log/src/main/java/com/swufe/core/ILogPrintDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frameworks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +99,8 @@
     "Maven.gtc-base-spring-boot-starter [install].executor": "Run",
     "Maven.gtc-convention-spring-boot-starter [clean].executor": "Run",
     "Maven.gtc-convention-spring-boot-starter [install].executor": "Run",
+    "Maven.gtc-log-spring-boot-starter [clean].executor": "Run",
+    "Maven.gtc-log-spring-boot-starter [install].executor": "Run",
     "Maven.gtc-user-spring-boot-starter [clean].executor": "Run",
     "Maven.gtc-user-spring-boot-starter [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -76,7 +108,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/gtc/Desktop/gtc12306/frameworks/log/src/main/java/com/swufe",
+    "last_opened_file_path": "C:/Users/gtc/Desktop/gtc12306/frameworks/cache/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,17 +124,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\log\src\main\java\com\swufe" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\log\src\main\resources" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\distributedid\src\main\java\com\swufe" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\distributedid\src\main\resources" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\database\src\main\java\com\swufe" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\resources" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\resources\META-INF" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\java\com\swufe" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\resources" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\java\com\swufe" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\resources\META-INF" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\idempotent\src\main\resources\META-INF" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\idempotent\src\main\resources\MTEA-INF" />
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\log\src\main\resources\META-INF" />
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\distributedid\src\main\resources\META-INF" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\designpattern\src\main\resources\META-INF" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\user\src\main\resources\META-INF" />
     </key>
   </component>
   <component name="RunManager">
@@ -141,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717067605411</updated>
       <workItem from="1717067606552" duration="2662000" />
-      <workItem from="1717070283758" duration="29265000" />
+      <workItem from="1717070283758" duration="37688000" />
     </task>
     <task id="LOCAL-00001" summary="完成base组件">
       <option name="closed" value="true" />
@@ -191,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717490988560</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成log组件">
+      <option name="closed" value="true" />
+      <created>1717493095690</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717493095690</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +244,7 @@
     <MESSAGE value="完成user组件" />
     <MESSAGE value="完成common组件" />
     <MESSAGE value="完成持久组件以及雪花算法组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成持久组件以及雪花算法组件" />
+    <MESSAGE value="完成log组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成log组件" />
   </component>
 </project>

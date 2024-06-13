@@ -5,15 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96272bf-c2a6-4297-b412-2e471df104cb" name="更改" comment="完成所有基础组件">
+      <change afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/common/constant/Index12306Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/common/constant/RedisKeyConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/common/enums/UserChainMarkEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/common/enums/UserRegisterErrorCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/common/enums/VerifyStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/config/RBloomFilterConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/config/UserRegisterBloomFilterProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/controller/PassengerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/controller/UserInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/controller/UserLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/PassengerDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/UserDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/UserDeletionDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/UserMailDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/UserPhoneDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/entity/UserReuseDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/PassengerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/UserDeletionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/UserMailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/UserPhoneMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dao/mapper/UserReuseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/PassengerRemoveReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/PassengerReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/UserDeletionReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/UserLoginReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/UserRegisterReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/req/UserUpdateReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/PassengerActualRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/PassengerRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/UserLoginRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/UserQueryActualRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/UserQueryRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/dto/resp/UserRegisterRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/serialize/IdCardDesensitizationSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/serialize/PhoneDesensitizationSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/PassengerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/UserLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/handler/filter/user/UserRegisterCheckDeletionChainHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/handler/filter/user/UserRegisterCreateChainFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/handler/filter/user/UserRegisterHasUsernameChainHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/handler/filter/user/UserRegisterParamNotNullChainHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/impl/PassengerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/impl/UserLoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/java/com/swufe/userservice/toolkit/UserReuseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/resources/mapper/UserMailMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/resources/mapper/UserPhoneMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/user-service/src/main/resources/shardingsphere-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/config/RedisDistributedProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/cache/src/main/java/com/swufe/config/RedisDistributedProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/IdempotentAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/token/IdempotentTokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/core/token/IdempotentTokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentMQConsumeStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentMQConsumeStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentSceneEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentSceneEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/enums/IdempotentTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/LogUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/SpELUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/frameworks/idempotent/src/main/java/com/swufe/toolkit/SpELUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +104,18 @@
     "Maven.gtc-log-spring-boot-starter [install].executor": "Run",
     "Maven.gtc-user-spring-boot-starter [clean].executor": "Run",
     "Maven.gtc-user-spring-boot-starter [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.UserServiceApplication (1).executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/gtc/Desktop/gtc12306/frameworks/cache/src/main/resources",
+    "last_opened_file_path": "C:/Users/gtc/Desktop/gtc12306/service/user-service/src/main/java/com/swufe/userservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,11 +131,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gtc\Desktop\gtc12306\service\user-service\src\main\java\com\swufe\userservice" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\service\user-service\src\main\java\com\swufe" />
+      <recent name="C:\Users\gtc\Desktop\gtc12306\service\user-service\src\main\resources" />
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\resources" />
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\resources\META-INF" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\cache\src\main\java\com\swufe" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\resources" />
-      <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\java\com\swufe" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\web\src\main\resources\META-INF" />
@@ -90,7 +145,14 @@
       <recent name="C:\Users\gtc\Desktop\gtc12306\frameworks\distributedid\src\main\resources\META-INF" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="RejectedProxyUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.swufe.threadpool.proxy.RejectedProxyUtil" />
       <module name="common" />
@@ -100,6 +162,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-service" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.swufe.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,7 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717067605411</updated>
       <workItem from="1717067606552" duration="2662000" />
-      <workItem from="1717070283758" duration="54373000" />
+      <workItem from="1717070283758" duration="62366000" />
     </task>
     <task id="LOCAL-00001" summary="完成base组件">
       <option name="closed" value="true" />
@@ -192,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717575853270</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="完成所有基础组件">
+      <option name="closed" value="true" />
+      <created>1718086849842</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718086849842</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

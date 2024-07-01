@@ -15,6 +15,7 @@
         <module>frameworks</module>
         <module>service</module>
         <module>service/user-service</module>
+        <module>service/gateway-service</module>
     </modules>
 
 

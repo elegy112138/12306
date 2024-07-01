@@ -137,6 +137,8 @@ public class UserLoginServiceImpl implements UserLoginService {
     }
 
     @Override
+
+
     public Boolean hasUsername(String username) {
         boolean hasUsername = userRegisterCachePenetrationBloomFilter.contains(username);
         if (hasUsername) {
@@ -191,7 +193,7 @@ public class UserLoginServiceImpl implements UserLoginService {
             userReuseMapper.delete(Wrappers.update(new UserReuseDO(username)));
             StringRedisTemplate instance = (StringRedisTemplate) distributedCache.getInstance();
             instance.opsForSet().remove(USER_REGISTER_REUSE_SHARDING + hashShardingIdx(username), username);
-            // 布隆过滤器设计问题：设置多大、碰撞率以及初始容量不够了怎么办？详情查看：https://nageoffer.com/12306/question
+            // 布隆过滤器设计问题：设置多大、碰撞率以及初始容量不够了怎么办？
             userRegisterCachePenetrationBloomFilter.add(username);
         } finally {
             lock.unlock();
@@ -208,7 +210,7 @@ public class UserLoginServiceImpl implements UserLoginService {
             throw new ClientException("注销账号与登录账号不一致");
         }
         RLock lock = redissonClient.getLock(USER_DELETION + requestParam.getUsername());
-        // 加锁为什么放在 try 语句外？https://www.yuque.com/magestack/12306/pu52u29i6eb1c5wh
+        // 加锁为什么放在 try 语句外？
         lock.lock();
         try {
             UserQueryRespDTO userQueryRespDTO = userService.queryUserByUsername(username);
